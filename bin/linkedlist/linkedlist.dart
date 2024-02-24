@@ -115,4 +115,20 @@ class LinkedList {
     _length++;
     return true;
   }
+
+  Node? remove(int index) {
+    if (index < 0 || index >= _length) return null;
+    if (index == 0) {
+      return removeFirst();
+    }
+    if (index == _length - 1) {
+      return removeLast();
+    }
+    Node? prev = get(index - 1);
+    Node? temp = prev?.next;
+    prev?.next = temp?.next;
+    temp?.next = null;
+    _length--;
+    return temp;
+  }
 }
