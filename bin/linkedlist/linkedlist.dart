@@ -79,4 +79,13 @@ class LinkedList {
     }
     return temp;
   }
+
+  Node? get(int index) {
+    if (index < 0 || index > _length) return null;
+    Node? temp = _head;
+    for (int i = 0; i < index; i++) {
+      temp = temp?.next;
+    }
+    return temp;
+  }
 }
