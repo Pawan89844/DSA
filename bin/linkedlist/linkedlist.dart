@@ -2,7 +2,7 @@ import 'node.dart';
 
 class LinkedList {
   Node? _head;
-  late Node _tail;
+  Node? _tail;
   late int _length;
 
   LinkedList(int value) {
@@ -20,15 +20,21 @@ class LinkedList {
     }
   }
 
-  void getHead() {
-    print('Head: ${_head?.value}');
-  }
+  void getHead() => print('Head: ${_head?.value}');
 
-  void getTail() {
-    print('Tail: ${_tail.value}');
-  }
+  void getTail() => print('Tail: ${_tail?.value}');
 
-  void getLength() {
-    print('Length: $_length');
+  void getLength() => print('Length: $_length');
+
+  void append(int value) {
+    Node newNode = Node(value);
+    if (_length == 0) {
+      _head = newNode;
+      _tail = newNode;
+    } else {
+      _tail?.next = newNode;
+      _tail = newNode;
+    }
+    _length++;
   }
 }
