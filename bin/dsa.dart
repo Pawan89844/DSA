@@ -12,6 +12,7 @@ void main(List<String> arguments) {
   // print(myLinkedList.removeFirst()?.value);
   // print(myLinkedList.removeFirst());
   // myLinkedList.prepand(3);
-  print('Index: ${myLinkedList.get(1)?.value}');
+  // print('Index: ${myLinkedList.get(1)?.value}');
+  myLinkedList.set(2, 10);
   myLinkedList.printList();
 }

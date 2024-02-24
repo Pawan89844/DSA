@@ -88,4 +88,13 @@ class LinkedList {
     }
     return temp;
   }
+
+  bool set(int index, int value) {
+    Node? temp = get(index);
+    if (temp != null) {
+      temp.value = value;
+      return true;
+    }
+    return false;
+  }
 }
