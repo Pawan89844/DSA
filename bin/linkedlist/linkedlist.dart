@@ -97,4 +97,22 @@ class LinkedList {
     }
     return false;
   }
+
+  bool insert(int index, int value) {
+    if (index < 0 || index > _length) return false;
+    if (index == 0) {
+      prepand(value);
+      return true;
+    }
+    if (index == _length) {
+      append(value);
+      return true;
+    }
+    Node? newNode = Node(value);
+    Node? temp = get(index - 1);
+    newNode.next = temp?.next;
+    temp?.next = newNode;
+    _length++;
+    return true;
+  }
 }

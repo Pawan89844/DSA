@@ -8,11 +8,6 @@ void main(List<String> arguments) {
   myLinkedList.append(2);
   myLinkedList.append(3);
   myLinkedList.append(4);
-  // print(myLinkedList.removeFirst()?.value);
-  // print(myLinkedList.removeFirst()?.value);
-  // print(myLinkedList.removeFirst());
-  // myLinkedList.prepand(3);
-  // print('Index: ${myLinkedList.get(1)?.value}');
-  myLinkedList.set(2, 10);
+  myLinkedList.insert(2, 9);
   myLinkedList.printList();
 }
