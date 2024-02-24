@@ -131,4 +131,18 @@ class LinkedList {
     _length--;
     return temp;
   }
+
+  void reverse() {
+    Node? temp = _head;
+    _head = _tail;
+    _tail = temp;
+    Node? after = temp?.next;
+    Node? before;
+    for (int i = 0; i < _length; i++) {
+      after = temp?.next;
+      temp?.next = before;
+      before = temp;
+      temp = after;
+    }
+  }
 }
