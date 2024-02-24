@@ -37,4 +37,22 @@ class LinkedList {
     }
     _length++;
   }
+
+  Node? removeLast() {
+    Node? temp = _head;
+    Node? pre = _tail;
+    if (_length == 0) return null;
+    while (temp?.next != null) {
+      pre = temp;
+      temp = temp?.next;
+    }
+    _tail = pre;
+    _tail?.next = null;
+    _length--;
+    if (_length == 0) {
+      _head = null;
+      _tail = null;
+    }
+    return temp;
+  }
 }
