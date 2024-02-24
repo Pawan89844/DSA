@@ -6,9 +6,9 @@ void main(List<String> arguments) {
   LinkedList myLinkedList = LinkedList(1);
 
   myLinkedList.append(2);
-  // print(myLinkedList.removeLast()?.value);
-  // print(myLinkedList.removeLast()?.value);
-  // print(myLinkedList.removeLast());
-  myLinkedList.prepand(3);
+  print(myLinkedList.removeFirst()?.value);
+  print(myLinkedList.removeFirst()?.value);
+  print(myLinkedList.removeFirst());
+  // myLinkedList.prepand(3);
   myLinkedList.printList();
 }
