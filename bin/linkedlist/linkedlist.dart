@@ -55,4 +55,16 @@ class LinkedList {
     }
     return temp;
   }
+
+  void prepand(int value) {
+    Node newNode = Node(value);
+    if (_length == 0) {
+      _head = newNode;
+      _tail = newNode;
+    } else {
+      newNode.next = _head;
+      _head = newNode;
+    }
+    _length++;
+  }
 }
