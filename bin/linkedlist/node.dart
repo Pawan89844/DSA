@@ -1,6 +1,6 @@
 class Node {
   int value;
-  dynamic next;
+  Node? next;
 
   Node(this.value);
 }

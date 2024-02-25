@@ -12,6 +12,10 @@ class LinkedList {
     _length = 1;
   }
 
+  Node? get head => _head;
+  Node? get tail => _tail;
+  int get length => _length;
+
   void printList() {
     Node? temp = _head;
     while (temp != null) {
@@ -144,5 +148,16 @@ class LinkedList {
       before = temp;
       temp = after;
     }
+  }
+
+  // LeetCode Problem with Two Pointer approach.
+  Node? findMiddleNode() {
+    Node? slowNode = _head;
+    Node? fastPointer = _head;
+    while (fastPointer != null && fastPointer.next != null) {
+      slowNode = slowNode?.next;
+      fastPointer = fastPointer.next?.next;
+    }
+    return slowNode;
   }
 }
