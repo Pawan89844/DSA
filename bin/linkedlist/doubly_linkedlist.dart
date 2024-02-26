@@ -79,4 +79,20 @@ class DoublyLinkedList {
     _length--;
     return temp;
   }
+
+  Node? get(int index) {
+    Node? temp = _head;
+    if (_length < 0 || index >= _length) return null;
+    if (index < _length / 2) {
+      for (int i = 0; i < index; i++) {
+        temp = temp?.next;
+      }
+    } else {
+      temp = _tail;
+      for (int i = _length - 1; i > index; i--) {
+        temp = temp?.prev;
+      }
+    }
+    return temp;
+  }
 }
