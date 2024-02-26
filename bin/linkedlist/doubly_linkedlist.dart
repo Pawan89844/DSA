@@ -104,4 +104,25 @@ class DoublyLinkedList {
     }
     return false;
   }
+
+  bool insert(int index, int value) {
+    if (index < 0 || index > _length) return false;
+    if (_length == 0) {
+      prepend(value);
+      return true;
+    }
+    if (index == _length) {
+      append(value);
+      return true;
+    }
+    Node? newNode = Node(value);
+    Node? before = get(index - 1);
+    Node? after = before?.next;
+    newNode.prev = before;
+    newNode.next = after;
+    before?.next = newNode;
+    after?.prev = newNode;
+    _length++;
+    return true;
+  }
 }
