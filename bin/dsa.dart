@@ -7,7 +7,7 @@ void main(List<String> arguments) {
   DoublyLinkedList myDoublyLinkedList = DoublyLinkedList(1);
   myDoublyLinkedList.append(2);
   myDoublyLinkedList.append(3);
-  print(myDoublyLinkedList.removeLast()?.value);
+  myDoublyLinkedList.prepend(4);
 
   myDoublyLinkedList.getHead();
   myDoublyLinkedList.getTail();

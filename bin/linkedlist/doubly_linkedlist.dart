@@ -51,4 +51,17 @@ class DoublyLinkedList {
     _length--;
     return temp;
   }
+
+  void prepend(int value) {
+    Node newNode = Node(value);
+    if (_length == 0) {
+      _head = newNode;
+      _tail = newNode;
+    } else {
+      newNode.next = _head;
+      _head?.prev = newNode;
+      _head = newNode;
+    }
+    _length++;
+  }
 }
