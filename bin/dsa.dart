@@ -1,5 +1,17 @@
 import 'package:dsa/dsa.dart' as dsa;
 
+import 'linkedlist/doubly_linkedlist.dart';
+import 'linkedlist/linkedlist.dart';
+
 void main(List<String> arguments) {
-  print('Hello world: ${dsa.calculate()}!');
+  DoublyLinkedList myDoublyLinkedList = DoublyLinkedList(1);
+  myDoublyLinkedList.append(2);
+  myDoublyLinkedList.append(3);
+  myDoublyLinkedList.append(4);
+  myDoublyLinkedList.remove(3);
+
+  myDoublyLinkedList.getHead();
+  myDoublyLinkedList.getTail();
+  myDoublyLinkedList.getLength();
+  myDoublyLinkedList.printList();
 }

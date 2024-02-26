@@ -1,6 +1,7 @@
 class Node {
   int value;
-  int? next;
+  Node? next;
+  Node? prev;
 
   Node(this.value);
 }
