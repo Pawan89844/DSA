@@ -8,8 +8,7 @@ void main(List<String> arguments) {
   myDoublyLinkedList.append(2);
   myDoublyLinkedList.append(3);
   myDoublyLinkedList.append(4);
-  print(myDoublyLinkedList.get(2)?.value);
-  print(myDoublyLinkedList.get(2)?.next?.value);
+  myDoublyLinkedList.set(2, 9);
 
   myDoublyLinkedList.getHead();
   myDoublyLinkedList.getTail();
