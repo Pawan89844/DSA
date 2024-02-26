@@ -64,4 +64,19 @@ class DoublyLinkedList {
     }
     _length++;
   }
+
+  Node? removeFirst() {
+    Node? temp = _head;
+    if (_length == 0) return null;
+    if (_length == 1) {
+      _head = null;
+      _tail = null;
+    } else {
+      _head = _head?.next;
+      _head?.prev = null;
+      temp?.next = null;
+    }
+    _length--;
+    return temp;
+  }
 }
