@@ -20,7 +20,7 @@ class LinkedList {
     Node? temp = _head;
     while (temp != null) {
       print(temp.value);
-      temp = temp.next as Node?;
+      temp = temp.next;
     }
   }
 
