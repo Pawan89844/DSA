@@ -7,6 +7,11 @@ void main(List<String> arguments) {
   myQueue.enqueue(2);
   myQueue.enqueue(3);
 
+  print('Remove: ${myQueue.dequeue()?.value}');
+  print('Remove: ${myQueue.dequeue()?.value}');
+  print('Remove: ${myQueue.dequeue()?.value}');
+  print('Remove: ${myQueue.dequeue()?.value}');
+
   myQueue.printList();
   myQueue.getFirst();
   myQueue.getLast();

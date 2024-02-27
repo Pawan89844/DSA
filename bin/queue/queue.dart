@@ -32,6 +32,20 @@ class Queue {
     _length++;
   }
 
+  QueueNode? dequeue() {
+    if (_length == 0) return null;
+    QueueNode? temp = _first;
+    if (_length == 1) {
+      _first = null;
+      _last = null;
+    } else {
+      _first = _first?.next;
+      temp?.next = null;
+    }
+    _length--;
+    return temp;
+  }
+
   void getFirst() => print('First: ${_first?.value}');
   void getLast() => print('Last: ${_last?.value}');
   void getHeight() => print('Length: $_length');
