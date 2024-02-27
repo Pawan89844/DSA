@@ -1,17 +1,10 @@
 import 'package:dsa/dsa.dart' as dsa;
-
-import 'linkedlist/doubly_linkedlist.dart';
-import 'linkedlist/linkedlist.dart';
+import 'stack/stack.dart';
 
 void main(List<String> arguments) {
-  DoublyLinkedList myDoublyLinkedList = DoublyLinkedList(1);
-  myDoublyLinkedList.append(2);
-  myDoublyLinkedList.append(3);
-  myDoublyLinkedList.append(4);
-  myDoublyLinkedList.remove(3);
+  Stack myStack = Stack(1);
 
-  myDoublyLinkedList.getHead();
-  myDoublyLinkedList.getTail();
-  myDoublyLinkedList.getLength();
-  myDoublyLinkedList.printList();
+  myStack.getTop();
+  myStack.getHeight();
+  myStack.printList();
 }
