@@ -1,15 +1,19 @@
 import 'package:dsa/dsa.dart' as dsa;
+import 'queue/queue.dart';
 import 'stack/stack.dart';
 
 void main(List<String> arguments) {
-  Stack myStack = Stack(3);
-  myStack.push(2);
-  myStack.push(1);
-  print('Remove: ${myStack.pop()?.value}');
-  print('Remove: ${myStack.pop()?.value}');
-  print('Remove: ${myStack.pop()?.value}');
-  print('Remove: ${myStack.pop()?.value}');
-  myStack.printList();
-  myStack.getHeight();
-  myStack.getTop();
+  Queue myQueue = Queue(1);
+  myQueue.enqueue(2);
+  myQueue.enqueue(3);
+
+  print('Remove: ${myQueue.dequeue()?.value}');
+  print('Remove: ${myQueue.dequeue()?.value}');
+  print('Remove: ${myQueue.dequeue()?.value}');
+  print('Remove: ${myQueue.dequeue()?.value}');
+
+  myQueue.printList();
+  myQueue.getFirst();
+  myQueue.getLast();
+  myQueue.getHeight();
 }
