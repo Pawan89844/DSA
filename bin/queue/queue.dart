@@ -20,6 +20,18 @@ class Queue {
     }
   }
 
+  void enqueue(int value) {
+    QueueNode newNode = QueueNode(value);
+    if (_length == 0) {
+      _first = newNode;
+      _last = newNode;
+    } else {
+      _last?.next = newNode;
+      _last = newNode;
+    }
+    _length++;
+  }
+
   void getFirst() => print('First: ${_first?.value}');
   void getLast() => print('Last: ${_last?.value}');
   void getHeight() => print('Length: $_length');

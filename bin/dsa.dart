@@ -4,6 +4,8 @@ import 'stack/stack.dart';
 
 void main(List<String> arguments) {
   Queue myQueue = Queue(1);
+  myQueue.enqueue(2);
+  myQueue.enqueue(3);
 
   myQueue.printList();
   myQueue.getFirst();
