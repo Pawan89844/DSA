@@ -3,5 +3,9 @@ import 'binarysearchtree/binary_search_tree.dart';
 
 void main(List<String> arguments) {
   BinarySearchTree myBST = BinarySearchTree();
-  print(myBST.root);
+  myBST.insert(5);
+  myBST.insert(9);
+  myBST.insert(4);
+  myBST.insert(10);
+  print(myBST.root?.right?.left?.value);
 }
