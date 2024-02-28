@@ -38,4 +38,25 @@ class BinarySearchTree {
       }
     }
   }
+
+  bool contains(int value) {
+    //CASE - II VALUE EXIST
+    BinarySearchTreeNode? temp = _root;
+    while (temp != null) {
+      // CASE - I || EXIST IN THE LEFT NODE?
+      if (value < temp.value) {
+        temp = temp.left;
+      }
+      // CASE - II || VALUE EXIST IN THE RIGHT NODE?
+      else if (value > temp.value) {
+        temp = temp.right;
+      }
+      // CASE - III || NEITHER IN LEFT NOR IN RIGHT
+      else {
+        return true;
+      }
+    }
+    // CASE - IV || VALUE DOESN'T EXIST
+    return false;
+  }
 }

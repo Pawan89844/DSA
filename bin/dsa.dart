@@ -7,5 +7,7 @@ void main(List<String> arguments) {
   myBST.insert(9);
   myBST.insert(4);
   myBST.insert(10);
-  print(myBST.root?.right?.left?.value);
+
+  print(myBST.contains(10));
+  print(myBST.contains(8));
 }
