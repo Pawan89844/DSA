@@ -1,19 +1,13 @@
 import 'package:dsa/dsa.dart' as dsa;
-import 'queue/queue.dart';
-import 'stack/stack.dart';
+import 'binarysearchtree/binary_search_tree.dart';
 
 void main(List<String> arguments) {
-  Queue myQueue = Queue(1);
-  myQueue.enqueue(2);
-  myQueue.enqueue(3);
+  BinarySearchTree myBST = BinarySearchTree();
+  myBST.insert(5);
+  myBST.insert(9);
+  myBST.insert(4);
+  myBST.insert(10);
 
-  print('Remove: ${myQueue.dequeue()?.value}');
-  print('Remove: ${myQueue.dequeue()?.value}');
-  print('Remove: ${myQueue.dequeue()?.value}');
-  print('Remove: ${myQueue.dequeue()?.value}');
-
-  myQueue.printList();
-  myQueue.getFirst();
-  myQueue.getLast();
-  myQueue.getHeight();
+  print(myBST.contains(10));
+  print(myBST.contains(8));
 }
