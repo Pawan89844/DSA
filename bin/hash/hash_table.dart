@@ -18,4 +18,14 @@ class HashTable {
       }
     }
   }
+
+  int _hash(String key) {
+    int hash = 0;
+    List<String> keyChar = key.trim().split('');
+    for (int i = 0; i < keyChar.length; i++) {
+      int asciValue = keyChar[i].codeUnitAt(i);
+      hash = (hash + asciValue * 23) % _dataMap.length;
+    }
+    return hash;
+  }
 }
