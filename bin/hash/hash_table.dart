@@ -42,10 +42,20 @@ class HashTable {
       _dataMap[index] = newNode;
     } else {
       HashNode? temp = _dataMap[index];
-      while (temp != null) {
-        temp = temp.next;
+      while (temp?.next != null) {
+        temp = temp?.next;
       }
       temp?.next = newNode;
     }
+  }
+
+  int get(String key) {
+    int index = _hash(key);
+    HashNode? temp = _dataMap[index];
+    while (temp != null) {
+      if (temp.key == key) return temp.value;
+      temp = temp.next;
+    }
+    return 0;
   }
 }
