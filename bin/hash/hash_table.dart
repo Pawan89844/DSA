@@ -58,4 +58,16 @@ class HashTable {
     }
     return 0;
   }
+
+  List keys() {
+    List<String> allKeys = <String>[];
+    for (int i = 0; i < _dataMap.length; i++) {
+      HashNode? temp = _dataMap[i];
+      while (temp != null) {
+        allKeys.add(temp.key);
+        temp = temp.next;
+      }
+    }
+    return allKeys;
+  }
 }
