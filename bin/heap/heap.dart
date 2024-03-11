@@ -43,4 +43,18 @@ class Heap {
       current = _parent(current);
     }
   }
+
+  void _sinkDown(int index) {}
+
+  int? remove() {
+    // CASE-I EMPTY CASE
+    if (_heap?.isEmpty as bool) return null;
+    // CASE-II ONE ITEM PRESENT
+    if (_heap?.length == 1) return _heap?.removeAt(0);
+    // CASE -III MORE THEN ONE ITEM
+    int maxValue = _heap!.get(0);
+    _heap!.set(0, _heap!.removeAt(_heap!.length - 1));
+    _sinkDown(0);
+    return maxValue;
+  }
 }
