@@ -21,9 +21,7 @@ class Heap {
   }
 
   int _parent(int index) {
-    int temp = (index - 1) ~/ 2;
-    // int numb = int.parse(temp.isNegative ? '0' : temp.toStringAsFixed(0));
-    return temp;
+    return (index - 1) ~/ 2;
   }
 
   void _swap(int index1, int index2) {
@@ -44,7 +42,28 @@ class Heap {
     }
   }
 
-  void _sinkDown(int index) {}
+  void _sinkDown(int index) {
+    int maxIndex = index;
+    while (true) {
+      int rightIndex = _rightChild(index);
+      int leftIndex = _leftChild(index);
+
+      if (leftIndex < _heap!.length &&
+          _heap!.get(leftIndex) > _heap!.get(maxIndex)) {
+        maxIndex = leftIndex;
+      }
+      if (rightIndex < _heap!.length &&
+          _heap!.get(rightIndex) > _heap!.get(maxIndex)) {
+        maxIndex = rightIndex;
+      }
+      if (maxIndex != index) {
+        _swap(index, maxIndex);
+        index = maxIndex;
+      } else {
+        return;
+      }
+    }
+  }
 
   int? remove() {
     // CASE-I EMPTY CASE

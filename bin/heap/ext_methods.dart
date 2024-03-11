@@ -1,6 +1,10 @@
 extension GetListElement on List {
   int get(int index) {
-    return this[index];
+    if (index < 0 || index > length) {
+      throw Exception('Error');
+    } else {
+      return this[index];
+    }
   }
 }
 
