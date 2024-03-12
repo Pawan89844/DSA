@@ -5,8 +5,8 @@ import 'hash/hash_table.dart';
 import 'heap/heap.dart';
 
 void main(List<String> arguments) {
-  List<int> array = [1, 9, 6, 7, 3, 2, 5, 8];
+  List<int> array = [9, 1, 6, 7, 3, 2, 5, 8];
 
-  BubbleSort.selectionSort(array);
+  BubbleSort.insertionSort(array);
   print(array);
 }
