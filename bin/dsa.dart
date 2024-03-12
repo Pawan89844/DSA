@@ -7,5 +7,6 @@ import 'heap/heap.dart';
 void main(List<String> arguments) {
   List<int> array = [1, 9, 6, 7, 3, 2, 5, 8];
 
-  BubbleSort.bubbleSort(array);
+  BubbleSort.selectionSort(array);
+  print(array);
 }
