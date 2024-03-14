@@ -6,6 +6,11 @@ class Questions {
     print(sum);
   }
 
+  int fact(int n) {
+    if (n == 1) return 1;
+    return n * fact(n - 1);
+  }
+
   void largestNum(List<int> arr, int larNum) {
     for (int i = 0; i < arr.length; i++) {
       if (arr[i] > larNum) {
