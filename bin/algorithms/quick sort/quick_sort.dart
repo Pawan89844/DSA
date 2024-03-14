@@ -16,4 +16,12 @@ class QuickSort {
     swap(array, pivotIndex, swapIndex);
     return swapIndex;
   }
+
+  static void quickSort(List<int> array, int left, int right) {
+    if (left < right) {
+      int pivotIndex = pivot(array, left, right);
+      quickSort(array, left, pivotIndex - 1);
+      quickSort(array, pivotIndex + 1, right);
+    }
+  }
 }
