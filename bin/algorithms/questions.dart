@@ -1,9 +1,19 @@
 class Questions {
-  void sum(List<int> arr, int sum) {
+  int sum(List<int> arr) {
+    int sum = 0;
     for (int i in arr) {
       sum += i;
     }
-    print(sum);
+    return sum;
+  }
+
+  int reverseNumber(int number, int reverse) {
+    while (number != 0) {
+      int remainder = number % 10;
+      reverse = reverse * 10 + remainder;
+      number = number ~/ 10;
+    }
+    return reverse;
   }
 
   int fact(int n) {
@@ -54,5 +64,23 @@ class Questions {
       }
     }
     print(count);
+  }
+
+  // Leetcode question
+  void merge(List<int> nums1, int m, List<int> nums2, int n) {
+    int i = m - 1;
+    int j = n - 1;
+    int k = m + n - 1;
+    while (j >= 0) {
+      if (i >= 0 && nums1[i] > nums2[j]) {
+        nums1[k] = nums1[i];
+        k--;
+        i--;
+      } else {
+        nums1[k] = nums2[j];
+        k--;
+        j--;
+      }
+    }
   }
 }
