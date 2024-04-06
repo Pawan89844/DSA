@@ -4,14 +4,11 @@ import 'linkedlist/doubly_linkedlist.dart';
 import 'linkedlist/linkedlist.dart';
 
 void main(List<String> arguments) {
-  DoublyLinkedList myDoublyLinkedList = DoublyLinkedList(1);
+  LinkedList myDoublyLinkedList = LinkedList(1);
+  myDoublyLinkedList.append(1);
   myDoublyLinkedList.append(2);
   myDoublyLinkedList.append(3);
-  myDoublyLinkedList.append(4);
-  myDoublyLinkedList.remove(3);
-
-  myDoublyLinkedList.getHead();
-  myDoublyLinkedList.getTail();
-  myDoublyLinkedList.getLength();
+  myDoublyLinkedList.append(3);
+  myDoublyLinkedList.deleteDuplicates();
   myDoublyLinkedList.printList();
 }
