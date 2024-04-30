@@ -83,4 +83,10 @@ class Questions {
       }
     }
   }
+
+  //Leetcode question 13. Roman to Integer
+  int? romanToInt(String s) {
+    Map<String, int> val = {};
+    for (int i = 0; i < s.length; i++) {}
+  }
 }
