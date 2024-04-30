@@ -1,18 +1,18 @@
-import 'algorithms/bubble sort/buble_sort.dart';
-import 'algorithms/questions.dart';
-import 'algorithms/quick sort/quick_sort.dart';
+import 'package:dsa/dsa.dart' as dsa;
+import 'binarysearchtree/binary_search_tree.dart';
+import 'queue/queue.dart';
+import 'stack/stack.dart';
 
 void main(List<String> arguments) {
-  String s = '';
+  BinarySearchTree myBST = BinarySearchTree();
+  myBST.insert(47);
+  myBST.insert(21);
+  myBST.insert(76);
+  myBST.insert(18);
+  myBST.insert(27);
+  myBST.insert(52);
+  myBST.insert(82);
 
-  // List<int> nums1 = [1, 2, 3, 0, 0, 0];
-  // List<int> nums2 = [2, 5, 6];
-  // int m = 3;
-  // int n = 3;
-  // Questions q = Questions();
-  // q.merge(nums1, m, nums2, n);
-  // List<int> arr = [1, 5, 2, 7, 6, 9, 3];
-  // BubbleSort.bubbleSort(arr);
-  // print(arr);
-  // print(nums1);
+  print(myBST.BFS());
+  // print(myBST.contains(8));
 }
