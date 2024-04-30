@@ -1,8 +1,9 @@
 import 'package:dsa/dsa.dart';
 import 'package:test/test.dart';
 
+import 'questions_test.dart';
+
 void main() {
-  test('calculate', () {
-    expect(calculate(), 42);
-  });
+  QuestionTest testQuestion = QuestionTest();
+  testQuestion.testSum();
 }
