@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'binary_search_tree_node.dart';
 
 class BinarySearchTree {
@@ -58,5 +60,24 @@ class BinarySearchTree {
     }
     // CASE - IV || VALUE DOESN'T EXIST
     return false;
+  }
+
+  // Breath First Search
+  List<int> BFS() {
+    BinarySearchTreeNode? currentNode = _root;
+    Queue<BinarySearchTreeNode> queue = Queue<BinarySearchTreeNode>();
+    List<int> result = [];
+    queue.add(currentNode as BinarySearchTreeNode);
+    while (queue.isNotEmpty) {
+      currentNode = queue.removeFirst();
+      result.add(currentNode.value);
+      if (currentNode.left != null) {
+        queue.add(currentNode.left!);
+      }
+      if (currentNode.right != null) {
+        queue.add(currentNode.right!);
+      }
+    }
+    return result;
   }
 }
