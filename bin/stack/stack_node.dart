@@ -1,5 +1,5 @@
 class StackNode {
-  int value;
+  int? value;
   StackNode? next;
 
   StackNode(this.value);

@@ -4,15 +4,20 @@ import 'queue/queue.dart';
 import 'stack/stack.dart';
 
 void main(List<String> arguments) {
-  BinarySearchTree myBST = BinarySearchTree();
-  myBST.insert(47);
-  myBST.insert(21);
-  myBST.insert(76);
-  myBST.insert(18);
-  myBST.insert(27);
-  myBST.insert(52);
-  myBST.insert(82);
+  Stack myStack = Stack();
+  myStack.push(25);
+  myStack.push(36);
+  myStack.printList();
+  // print(myStack.isNotEmpty);
+  // BinarySearchTree myBST = BinarySearchTree();
+  // myBST.insert(47);
+  // myBST.insert(21);
+  // myBST.insert(76);
+  // myBST.insert(18);
+  // myBST.insert(27);
+  // myBST.insert(52);
+  // myBST.insert(82);
 
-  print(myBST.BFS());
+  // print(myBST.BFS());
   // print(myBST.contains(8));
 }

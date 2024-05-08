@@ -4,11 +4,14 @@ class Stack {
   StackNode? _top;
   late int _height;
 
-  Stack(int value) {
+  Stack([int? value]) {
     StackNode newNode = StackNode(value);
     _top = newNode;
-    _height = 1;
+    _height = 0;
   }
+
+  bool get isEmpty => _isEmpty();
+  bool get isNotEmpty => !_isEmpty();
 
   void printList() {
     StackNode? temp = _top;
@@ -20,7 +23,7 @@ class Stack {
 
   void push(int value) {
     StackNode newNode = StackNode(value);
-    if (_height == 0) {
+    if (_height == 0 && isEmpty) {
       _top = newNode;
     } else {
       newNode.next = _top;
@@ -36,6 +39,14 @@ class Stack {
     temp?.next = null;
     _height--;
     return temp;
+  }
+
+  bool _isEmpty(){
+    if(_top?.value == null){
+      return true;
+    }else{
+      return false;
+    }
   }
 
   void getTop() => print('Top: ${_top?.value}');
