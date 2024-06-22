@@ -89,4 +89,17 @@ class Questions {
     Map<String, int> val = {};
     for (int i = 0; i < s.length; i++) {}
   }
+
+  bool? containsDuplicate(List<int> nums) {
+    Set val = {};
+    for (int i = 0; i < nums.length; i++) {
+      val.add(nums[i]);
+    }
+    if (nums.length > val.length) {
+      print('True');
+    } else {
+      print('False');
+    }
+    print('Set: $val');
+  }
 }
