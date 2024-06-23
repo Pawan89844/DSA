@@ -1,16 +1,29 @@
+import 'dart:collection';
+
 import 'package:dsa/dsa.dart' as dsa;
 import 'algorithms/questions.dart';
 import 'binarysearchtree/binary_search_tree.dart';
-import 'queue/queue.dart';
+// import 'queue/queue.dart';
 import 'stack/stack.dart';
+import 'strings/my_strings.dart';
 
 void main(List<String> arguments) {
-  Questions q = Questions();
-  List<int> nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
-  q.containsDuplicate(nums);
+  MyString string = MyString();
+  string.bufferString();
+  // DoubleLinkedQueue queue = DoubleLinkedQueue();
+  // queue.add(25);
+  // queue.add(31);
+  // queue.add(32);
+  // queue.add(12);
+  // print('Queue: $queue');
+  // Questions q = Questions();
+  // List<int> nums = [1, 1, 1, 3, 3, 4, 3, 2, 4, 2];
+  // q.containsDuplicate(nums);
   // Stack myStack = Stack();
   // myStack.push(25);
   // myStack.push(36);
+  // myStack.push(57);
+  // myStack.push(92);
   // myStack.printList();
   // print(myStack.isNotEmpty);
   // BinarySearchTree myBST = BinarySearchTree();
