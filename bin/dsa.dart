@@ -8,8 +8,11 @@ import 'stack/stack.dart';
 import 'strings/my_strings.dart';
 
 void main(List<String> arguments) {
-  MyString string = MyString();
-  string.bufferString();
+  List<int> nums = [3];
+  int val = 3;
+  Questions q = Questions();
+  q.removeElement(nums, val);
+
   // DoubleLinkedQueue queue = DoubleLinkedQueue();
   // queue.add(25);
   // queue.add(31);
