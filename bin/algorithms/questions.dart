@@ -113,4 +113,15 @@ class Questions {
     }
     return k;
   }
+
+  int? maxProfit(List<int> prices) {
+    int min = prices[0];
+    int max = 0;
+
+    for (int i = 1; i < prices.length; i++) {
+      min = min.compareTo(prices[i]) < 0 ? min : prices[i];
+      max = max.compareTo(prices[i] - min) < 0 ? prices[i] - min : max;
+    }
+    return max;
+  }
 }

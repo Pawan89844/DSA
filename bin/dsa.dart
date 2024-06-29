@@ -8,10 +8,10 @@ import 'stack/stack.dart';
 import 'strings/my_strings.dart';
 
 void main(List<String> arguments) {
-  List<int> nums = [3];
+  List<int> nums = [7, 1, 5, 3, 6, 4];
   int val = 3;
   Questions q = Questions();
-  q.removeElement(nums, val);
+  q.maxProfit(nums);
 
   // DoubleLinkedQueue queue = DoubleLinkedQueue();
   // queue.add(25);
