@@ -4,14 +4,29 @@ import 'package:dsa/dsa.dart' as dsa;
 import 'algorithms/questions.dart';
 import 'binarysearchtree/binary_search_tree.dart';
 // import 'queue/queue.dart';
+import 'graph/graph.dart';
 import 'stack/stack.dart';
 import 'strings/my_strings.dart';
 
 void main(List<String> arguments) {
-  List<int> nums = [7, 1, 5, 3, 6, 4];
-  int val = 3;
-  Questions q = Questions();
-  q.maxProfit(nums);
+  Graph graph = Graph();
+  graph.addVertex('A');
+  graph.addVertex('B');
+  graph.addVertex('C');
+  graph.addVertex('D');
+  // graph.printGraph();
+  graph.addEdge('A', 'B');
+  graph.addEdge('A', 'C');
+  graph.addEdge('A', 'D');
+  graph.addEdge('B', 'D');
+  graph.addEdge('C', 'D');
+  graph.printGraph();
+  graph.removeVertex('D');
+  graph.printGraph();
+  // List<int> nums = [7, 1, 5, 3, 6, 4];
+  // int val = 3;
+  // Questions q = Questions();
+  // q.maxProfit(nums);
 
   // DoubleLinkedQueue queue = DoubleLinkedQueue();
   // queue.add(25);
