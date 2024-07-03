@@ -3,16 +3,16 @@ import 'hash/my_maps.dart';
 import 'strings/my_ds.dart';
 
 void main(List<String> arguments) {
-  MyMaps maps = MyMaps();
+  // MyMaps maps = MyMaps();
 
-  maps.intersection([1, 2, 2, 1], [2, 2]);
+  // maps.intersection([1, 2, 2, 1], [2, 2]);
   // Technique tq = Technique();
   // List<int> arr = [2, 1, 5, 1, 3, 2];
   // int k = 3;
   // tq.maxSum(arr, k);
-  // MyDS myString = MyDS();
+  MyDS myString = MyDS();
   // String name = 'Pawan Kumar';
-  // myString.patternMatching(name);
+  print(myString.strstr("sadbutsad", "sad"));
   // Graph graph = Graph();
   // graph.addVertex('A');
   // graph.addVertex('B');
