@@ -65,6 +65,42 @@ class Technique {
   }
 
   void isAlphabet(String char) {
-    // if (char >= 97 || char <= 122) {}
+    if (RegExp(r'^[A-Za-z]').hasMatch(char)) {
+      print('Value is an Alphabet: $char');
+    } else {
+      print('Value is not an Alphabet');
+    }
+  }
+
+  void isVowel(String char) {
+    if (char == 'a' ||
+        char == 'e' ||
+        char == 'i' ||
+        char == 'o' ||
+        char == 'u') {
+      print('Input character is vowel: $char');
+    } else {
+      print('Input character is not a vowel: $char');
+    }
+  }
+
+  void isDigit(String char) {
+    if (RegExp(r'^[A-Za-z]').hasMatch(char)) {
+      print('Value is character: $char');
+    } else if (RegExp(r'[0-9]').hasMatch(char)) {
+      print('Value is a digit: $char');
+    } else {
+      print('Neither a Character Nor a Digit: $char');
+    }
+  }
+
+  void isCase(String char) {
+    if (RegExp(r'[A-Z]').hasMatch(char)) {
+      print('Upper case: $char');
+    } else if (RegExp(r'[a-z]').hasMatch(char)) {
+      print('Lower case: $char');
+    } else {
+      print('Mixed case: $char');
+    }
   }
 }
