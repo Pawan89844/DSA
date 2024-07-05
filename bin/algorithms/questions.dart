@@ -124,4 +124,16 @@ class Questions {
     }
     return max;
   }
+
+  List<int>? twoSum(List<int> nums, int target) {
+    Map<int, int> num = {};
+    for (int i = 0; i < nums.length; i++) {
+      int temp = target - nums[i];
+      if (num.containsKey(temp)) {
+        return [num[temp]!, i];
+      }
+      num.addAll({nums[i]: i});
+    }
+    return null;
+  }
 }

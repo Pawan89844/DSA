@@ -1,15 +1,19 @@
 import 'dart:io';
 
+import 'algorithms/questions.dart';
 import 'conditional/technique.dart';
 import 'hash/my_maps.dart';
 import 'strings/my_ds.dart';
 
 void main(List<String> arguments) {
+  Questions q = Questions();
+
+  print(q.twoSum([3, 2, 3], 6));
   // MyMaps maps = MyMaps();
 
   // maps.intersection([1, 2, 2, 1], [2, 2]);
-  Technique tq = Technique();
-  tq.leapYear(17);
+  // Technique tq = Technique();
+  // tq.leapYear(17);
   // List<int> arr = [2, 1, 5, 1, 3, 2];
   // int k = 3;
   // tq.maxSum(arr, k);
