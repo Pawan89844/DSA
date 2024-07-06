@@ -6,14 +6,15 @@ import 'hash/my_maps.dart';
 import 'strings/my_ds.dart';
 
 void main(List<String> arguments) {
-  // Questions q = Questions();
+  Questions q = Questions();
+  q.containsNearbyDuplicate([1, 2, 3, 1], 3);
 
   // print(q.twoSum([3, 2, 3], 6));
   // MyMaps maps = MyMaps();
 
   // maps.intersection([1, 2, 2, 1], [2, 2]);
-  Technique tq = Technique();
-  tq.isCase('NJAalmjkja');
+  // Technique tq = Technique();
+  // tq.isCase('NJAalmjkja');
   // tq.leapYear(17);
   // List<int> arr = [2, 1, 5, 1, 3, 2];
   // int k = 3;
