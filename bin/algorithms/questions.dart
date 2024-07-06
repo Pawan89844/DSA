@@ -137,14 +137,30 @@ class Questions {
     return null;
   }
 
-  bool? containsNearbyDuplicate(List<int> nums, int k) {
+  bool containsNearbyDuplicate(List<int> nums, int k) {
+    Map<int, dynamic> val = {};
     for (int i = 0; i < nums.length; i++) {
-      for (int j = i + 1; j < nums.length; j++) {
-        if (nums[i] == nums[j]) {
-          print('Duplicate: ${nums[i]}');
+      if (val.containsKey(nums[i])) {
+        int temp = val[nums[i]]!;
+        if ((i - temp).abs() <= k) {
+          return true;
         }
       }
+      val[nums[i]] = i;
     }
-    return null;
+    return false;
+  }
+
+  int? passThePillow(int n, int time) {
+    int direction = 1;
+    int current = 1;
+    while (time > 0) {
+      current += direction;
+      if (current == n || current == 1) {
+        direction *= -1;
+      }
+      time--;
+    }
+    return current;
   }
 }
