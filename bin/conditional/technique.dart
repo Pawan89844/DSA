@@ -1,4 +1,6 @@
-class Technique {
+import 'dart:math' as math;
+
+class Technique with Loops {
   void maxSum(List<int> arr, int k) {
     int windowsSum = 0;
     List<int> result = [];
@@ -102,5 +104,57 @@ class Technique {
     } else {
       print('Mixed case: $char');
     }
+  }
+}
+
+mixin class Loops {
+  int sum(int n) {
+    // i = 1 -> sum = 1
+    // i = 2 -> sum = 3
+    // i = 3 -> sum = 6
+    // i = 4 -> sum = 10
+    // i = 5 -> sum = 15
+    // i = 6 -> sum = 21
+    // i = 7 -> sum = 28
+    // i = 8 -> sum = 36
+    // i = 9 -> sum = 45
+    int sum = 0;
+    for (int i = 1; i < n; i++) {
+      sum += i;
+    }
+    return sum;
+  }
+
+  int mul(int n) {
+    // i = 1 -> mul = 1
+    // i = 2 -> mul = 2
+    // i = 3 -> mul = 6
+    // i = 4 -> mul = 24
+    // i = 5 -> mul = 120
+    int mul = 1;
+    for (int i = 1; i <= n; i++) {
+      mul *= i;
+    }
+    return mul;
+  }
+
+  // Recursive function.
+  int fact(int n) {
+    if (n == 1) {
+      return 1;
+    } else {
+      return n * fact(n - 1);
+    }
+  }
+
+  double expo(int base, int power) {
+    // i = 1 -> value = 4 * 4 = 16
+    // i = 2 -> value =
+    // int value = 1;
+    // for (int i = 1; i <= power; i++) {
+    //   value *= base;
+    // }
+    // return value;
+    return math.exp(base);
   }
 }

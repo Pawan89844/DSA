@@ -88,6 +88,7 @@ class Questions {
   int? romanToInt(String s) {
     Map<String, int> val = {};
     for (int i = 0; i < s.length; i++) {}
+    return null;
   }
 
   bool? containsDuplicate(List<int> nums) {
@@ -101,6 +102,7 @@ class Questions {
       print('False');
     }
     print('Set: $val');
+    return null;
   }
 
   int removeElement(List<int> nums, int val) {
@@ -162,5 +164,20 @@ class Questions {
       time--;
     }
     return current;
+  }
+
+  /// Leetcode july challenge.
+  int numWaterBottles(int numBottles, int numExchange) {
+    int emptyBottle = 0;
+    int drunk = 0;
+
+    while (numBottles > 0) {
+      drunk += numBottles;
+      emptyBottle += numBottles;
+
+      numBottles = emptyBottle ~/ numExchange;
+      emptyBottle = emptyBottle % numExchange;
+    }
+    return drunk;
   }
 }

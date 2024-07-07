@@ -7,11 +7,15 @@ import 'hash/my_maps.dart';
 import 'strings/my_ds.dart';
 
 void main(List<String> arguments) {
+  Technique tq = Technique();
+
+  // print('Sum: ${tq.expo(4, 3)}');
   // TreeNode? node = TreeNode(
   //     1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3, TreeNode(6)));
   // node.traverse(node);
   Questions q = Questions();
-  q.containsNearbyDuplicate([1, 2, 3, 1], 3);
+  print(q.numWaterBottles(15, 4));
+  // q.containsNearbyDuplicate([1, 2, 3, 1], 3);
   // print(q.passThePillow(4, 5));
 
   // print(q.twoSum([3, 2, 3], 6));
