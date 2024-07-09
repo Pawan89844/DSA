@@ -180,4 +180,86 @@ class Questions {
     }
     return drunk;
   }
+
+  bool isPalindrome(String s) {
+    String lowerCase = s.toLowerCase();
+    String filter = lowerCase.replaceAll(RegExp(r'[^a-z0-9]'), '');
+    int left = 0;
+    int right = filter.length - 1;
+
+    while (left < right) {
+      if (filter[left] != filter[right]) {
+        return false;
+      }
+      left++;
+      right--;
+    }
+    return true;
+  }
+
+  bool? isSubsequence(String s, String t) {
+    int i = 0;
+    int j = 0;
+    while (i < s.length && j < t.length) {
+      if (s[i] == t[j]) {
+        i++;
+      }
+      j++;
+    }
+    return i == s.length;
+  }
+
+  bool? canConstruct(String ransomNote, String magazine) {
+    Map<String, int> magazineFrequency = {};
+    for (int i = 0; i < magazine.length; i++) {
+      String char = magazine[i];
+      if (magazineFrequency.containsKey(char)) {
+        magazineFrequency[char] = magazineFrequency[char]! + 1;
+      } else {
+        magazineFrequency[char] = 1;
+      }
+    }
+
+    for (int i = 0; i < ransomNote.length; i++) {
+      String char = ransomNote[i];
+      if (!magazineFrequency.containsKey(char) ||
+          magazineFrequency[char] == 0) {
+        return false;
+      }
+      magazineFrequency[char] = magazineFrequency[char]! - 1;
+    }
+
+    return true;
+  }
+
+  bool? wordPattern(String pattern, String s) {
+    Map<String, String> wordsToPattern = {};
+    Map<String, String> patternToWord = {};
+
+    List<String> sList = s.split(' ');
+    if (sList.length != pattern.length) {
+      return false;
+    }
+
+    for (int i = 0; i < pattern.length; i++) {
+      String char = pattern[i];
+      String word = sList[i];
+
+      if (patternToWord.containsKey(char)) {
+        if (patternToWord[char] != word) {
+          return false;
+        }
+      } else {
+        patternToWord[char] = word;
+      }
+      if (wordsToPattern.containsKey(word)) {
+        if (wordsToPattern[word] != char) {
+          return false;
+        }
+      } else {
+        wordsToPattern[word] = char;
+      }
+    }
+    return true;
+  }
 }
