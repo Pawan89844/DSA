@@ -274,4 +274,56 @@ class Questions {
     digits.insert(0, 1);
     return digits;
   }
+
+  // String? getEncryptedString(String s, int k) {
+  //   String c = s[k];
+  //   s.substring(k);
+  //   print(s.replaceRange(0, 1, c));
+  // }
+
+  int minOperations(List<String> logs) {
+    int depth = 0;
+    for (int i = 0; i < logs.length; i++) {
+      if (logs[i] == './') continue;
+      if (logs[i] == '../') {
+        depth--;
+        if (depth < 0) depth = 0;
+      } else {
+        depth++;
+      }
+    }
+    return depth;
+  }
+
+  bool? isIsomorphic(String s, String t) {
+    if (s.length != t.length) {
+      return false;
+    }
+
+    Map<String, String> sToT = {};
+    Map<String, String> tToS = {};
+
+    for (int i = 0; i < s.length; i++) {
+      String sChar = s[i];
+      String tChar = t[i];
+
+      if (sToT.containsKey(sChar)) {
+        if (sToT[sChar] != tChar) {
+          return false;
+        }
+      } else {
+        sToT[sChar] = tChar;
+      }
+
+      if (tToS.containsKey(tChar)) {
+        if (tToS[tChar] != sChar) {
+          return false;
+        }
+      } else {
+        tToS[tChar] = sChar;
+      }
+    }
+
+    return true;
+  }
 }
