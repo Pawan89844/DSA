@@ -157,4 +157,20 @@ mixin class Loops {
     // return value;
     return math.exp(base);
   }
+
+  /// Remove Duplicates from Sorted Array
+  /// Problem: Given a sorted array,
+  /// remove the duplicates in-place such that each element appears only once and return the new length.
+
+  void removeDuplicate() {
+    List<int> arr = [1, 1, 2];
+    int left = 0;
+    int right = arr.length - 1;
+
+    while (left < right) {
+      if (arr[left] == arr[right]) {
+        print('Elements: ${arr[left]}');
+      }
+    }
+  }
 }

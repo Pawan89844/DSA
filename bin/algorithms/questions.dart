@@ -1,3 +1,7 @@
+import 'dart:ffi';
+
+import '../linkedlist/linkedlist.dart';
+
 class Questions {
   int sum(List<int> arr) {
     int sum = 0;
@@ -104,6 +108,13 @@ class Questions {
     print('Set: $val');
     return null;
   }
+
+  /// Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
+  /// Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
+  /// Change the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.
+  /// Return k.
+  /// [3,2,2,3], 3
+  /// [0,1,2,2,3,0,4,2], 2
 
   int removeElement(List<int> nums, int val) {
     int k = 0;
@@ -344,5 +355,42 @@ class Questions {
       }
     }
     return stack.join('');
+  }
+
+  int reverse(int x) {
+    const int maxInteger = 2147483647;
+    int reversed = 0;
+    bool isNegetive = x < 0;
+
+    x = x.abs();
+
+    while (x > 0) {
+      if (reversed > maxInteger / 10) {
+        return 0;
+      }
+      int remainder = x % 10;
+      reversed = (reversed * 10) + remainder;
+      x = x ~/ 10;
+    }
+
+    return isNegetive ? -reversed : reversed;
+  }
+
+  List<int>? frequencySort(List<int> nums) {
+    ///[1, 1, 2, 2, 2, 3]
+    Map<int, int> val = {};
+    for (final n in nums) {
+      val[n] = (val[n] ?? 0) + 1;
+    }
+
+    nums.sort((a, b) {
+      int freqA = val[a]!;
+      int freqB = val[b]!;
+      if (freqA == freqB) {
+        return b.compareTo(a);
+      }
+      return freqA.compareTo(freqB);
+    });
+    return nums;
   }
 }

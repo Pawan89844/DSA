@@ -1,9 +1,11 @@
+import 'dart:collection';
 import 'dart:io';
-
+import 'package:collection/collection.dart';
 import 'algorithms/questions.dart';
 import 'binarysearchtree/tree_node.dart';
 import 'conditional/technique.dart';
 import 'hash/my_maps.dart';
+// import 'linkedlist/linkedlist.dart';
 import 'strings/my_ds.dart';
 
 void main(List<String> arguments) {
@@ -14,7 +16,8 @@ void main(List<String> arguments) {
   //     1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3, TreeNode(6)));
   // node.traverse(node);
   Questions q = Questions();
-  print(q.reverseParentheses("(ed(et(oc))el)"));
+  print(q.frequencySort([1, 1, 2, 2, 2, 3]));
+  // print(q.addTwoNumbers(l1, l2));
   // q.containsNearbyDuplicate([1, 2, 3, 1], 3);
   // print(q.passThePillow(4, 5));
 
