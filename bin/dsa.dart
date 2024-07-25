@@ -1,6 +1,7 @@
 import 'dart:collection';
 import 'dart:io';
 import 'package:collection/collection.dart';
+import 'algorithms/dynamic programming/dynamic_programming.dart';
 import 'algorithms/questions.dart';
 import 'binarysearchtree/tree_node.dart';
 import 'conditional/technique.dart';
@@ -9,14 +10,17 @@ import 'hash/my_maps.dart';
 import 'strings/my_ds.dart';
 
 void main(List<String> arguments) {
-  Technique tq = Technique();
+  DynamicProgramming pro = DynamicProgramming();
+  pro.blankStar();
+
+  // Technique tq = Technique();
 
   // print('Sum: ${tq.expo(4, 3)}');
   // TreeNode? node = TreeNode(
   //     1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3, TreeNode(6)));
   // node.traverse(node);
-  Questions q = Questions();
-  print(q.frequencySort([1, 1, 2, 2, 2, 3]));
+  // Questions q = Questions();
+  // print(q.frequencySort([1, 1, 2, 2, 2, 3]));
   // print(q.addTwoNumbers(l1, l2));
   // q.containsNearbyDuplicate([1, 2, 3, 1], 3);
   // print(q.passThePillow(4, 5));
