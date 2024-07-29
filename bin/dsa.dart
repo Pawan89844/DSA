@@ -11,7 +11,7 @@ import 'strings/my_ds.dart';
 
 void main(List<String> arguments) {
   DynamicProgramming pro = DynamicProgramming();
-  pro.blankStar();
+  pro.rhombusPatter();
 
   // Technique tq = Technique();
 

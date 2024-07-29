@@ -28,4 +28,17 @@ class DynamicProgramming {
       stdout.writeln(' ');
     }
   }
+
+  void rhombusPatter() {
+    int len = 4;
+    for (int i = 0; i < len; i++) {
+      for (int j = 0; j < len + i; j++) {
+        stdout.write(' ');
+      }
+      for (int k = 0; k < len; k++) {
+        stdout.write('*');
+      }
+      stdout.writeln(' ');
+    }
+  }
 }
